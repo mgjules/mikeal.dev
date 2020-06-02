@@ -17,6 +17,11 @@
             class="mt-3 text-center md:text-left"
             :document="jumbo"
           />
+          <BaseButton
+            class="mt-3 text-sm uppercase"
+            @click.native="$router.push('/about')"
+            >Learn more about me</BaseButton
+          >
         </div>
       </div>
     </BaseSection>
