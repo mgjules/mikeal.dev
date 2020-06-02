@@ -17,7 +17,7 @@
             <button
               class="block md:hidden text-gray-500 hover:text-white focus:text-white focus:outline-none"
               type="button"
-              @click="drawer = !drawer"
+              @click.stop="drawer = !drawer"
             >
               <svg
                 class="h-5 w-5 fill-current"
@@ -50,7 +50,7 @@
         <transition name="dropdown">
           <div
             class="top-link flex flex-col my-4 space-y-4 text-blue-400 uppercase tracking-wider font-bold text-xs md:hidden"
-            v-click-outside="closeDrawer"
+            v-click-outside="vcoConfig"
             v-if="drawer"
           >
             <nuxt-link
@@ -117,7 +117,11 @@
 export default {
   data() {
     return {
-      drawer: false
+      drawer: false,
+      vcoConfig: {
+        handler: this.closeDrawer,
+        events: ['dblclick', 'click']
+      }
     }
   },
   created() {
