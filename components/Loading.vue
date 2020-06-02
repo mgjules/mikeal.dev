@@ -8,7 +8,7 @@
       id="L4"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      class="w-32 text-center fill-current"
+      class="w-20 md:w-32 text-center fill-current"
       viewBox="0 0 52 12"
       xml:space="preserve"
     >
