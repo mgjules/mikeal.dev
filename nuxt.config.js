@@ -101,13 +101,5 @@ export default {
     fallback: '404.html', // for Netlify
     routes: ['/'] // give the first url to start crawling
   },
-  components: true,
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in'
-  },
-  layoutTransition: {
-    name: 'page',
-    mode: 'out-in'
-  }
+  components: true
 }
