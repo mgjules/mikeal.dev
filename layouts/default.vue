@@ -71,11 +71,11 @@
     <!-- Footer -->
     <footer>
       <div
-        class="py-1 leading-none text-center text-sm font-hairline text-gray-500 tracking-wide text-opacity-50"
+        class="py-1 leading-none text-center text-sm font-hairline text-gray-400 tracking-wide"
       >
         Made with <span class="text-xl align-middle">♥</span> using
-        <a href="https://nuxtjs.org/" target="_blank">NuxtJS</a> &
-        <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>
+        <a class="font-medium" href="https://nuxtjs.org/" target="_blank">NuxtJS</a> &
+        <a class="font-medium" href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>
       </div>
     </footer>
     <!-- Debug bar -->
@@ -166,23 +166,11 @@ h4 {
   @apply text-lg;
 }
 
-button.btn {
-  @apply text-sm bg-blue-400 font-semibold text-gray-900 px-3 py-2 rounded;
-
-  &:hover {
-    @apply text-gray-300 bg-blue-500;
-  }
-
-  &:focus {
-    @apply outline-none;
-  }
-} 
-
 a {
   @apply no-underline border-b border-transparent text-blue-300;
 
   &:hover {
-    @apply text-gray-300 border-gray-300;
+    @apply text-gray-300 border-gray-300 cursor-pointer;
   }
 }
 

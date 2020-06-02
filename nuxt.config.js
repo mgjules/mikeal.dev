@@ -72,7 +72,8 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/components'
   ],
   /*
    ** Nuxt.js modules
@@ -100,7 +101,5 @@ export default {
     fallback: '404.html', // for Netlify
     routes: ['/'] // give the first url to start crawling
   },
-  components: {
-    dirs: [{ path: '@/components', pattern: '*.vue' }]
-  }
+  components: true
 }

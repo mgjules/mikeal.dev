@@ -71,6 +71,13 @@ typings/
 # Nuxt generate
 dist
 
+# Nuxt content
+content
+
+# Assets
+assets/img/projects
+assets/img/posts
+
 # vuepress build output
 .vuepress/dist
 
