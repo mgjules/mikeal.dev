@@ -64,7 +64,7 @@
       <div class="flex flex-col space-y-10">
         <article
           v-for="post in posts"
-          :key="post.title"
+          :key="post.id"
           class="flex flex-col justify-center md:justify-start md:flex-row space-y-3 md:space-y-0 md:space-x-10"
         >
           <div class="md:w-1/4 relative pb-56 md:pb-40">
