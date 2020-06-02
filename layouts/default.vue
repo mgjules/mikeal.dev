@@ -1,5 +1,5 @@
 <template>
-  <div class="font-google flex flex-col min-h-screen bg-dar text-gray-300 text-lg">
+  <div class="font-google flex flex-col min-h-screen text-gray-300 text-lg">
     <!-- Header -->
     <header class="py-5">
       <!-- Navigation -->
@@ -74,13 +74,18 @@
         class="py-1 leading-none text-center text-sm font-hairline text-gray-400 tracking-wide"
       >
         Made with <span class="text-xl align-middle">♥</span> using
-        <a class="font-medium" href="https://nuxtjs.org/" target="_blank">NuxtJS</a> &
-        <a class="font-medium" href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>
+        <a class="font-medium" href="https://nuxtjs.org/" target="_blank"
+          >NuxtJS</a
+        >
+        &
+        <a class="font-medium" href="https://tailwindcss.com/" target="_blank"
+          >TailwindCSS</a
+        >
       </div>
     </footer>
     <!-- Debug bar -->
     <div
-      class="flex justify-start flex-wrap px-5 py-1 mt-1 border-t border-gray-800 text-gray-500 tracking-wider space-x-2 text-sm"
+      class="fixed w-full bottom-0 flex justify-start flex-wrap px-5 py-1 mt-1 border-t border-gray-800 text-gray-500 tracking-wider space-x-2 text-sm bg-gray-900 bg-opacity-50"
       v-if="isDev"
     >
       <div class="font-bold uppercase bg-gray-800 px-2 rounded">
