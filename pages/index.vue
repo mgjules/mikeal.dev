@@ -67,14 +67,14 @@
           :key="post.title"
           class="flex flex-col justify-center md:justify-start md:flex-row space-y-3 md:space-y-0 md:space-x-10"
         >
-          <div class="relative pb-56 sm:pb-64 md:pr-48 md:pb-32 lg:pr-56 lg:pb-40">
+          <div class="md:w-1/4 relative pb-56 md:pb-40">
             <img
-              class="absolute h-full w-full object-top object-cover rounded"
+              class="absolute h-full w-full object-cover rounded"
               :src="require(`~/assets/img/posts/${post.img}`)"
               :alt="post.title"
             />
           </div>
-          <div>
+          <div class="md:w-3/4">
             <h2 class="mt-2">
               <a :href="post.link" target="_blank">{{ post.title }}</a>
             </h2>
@@ -87,7 +87,7 @@
                 >{{ tag }}</BaseChip
               >
             </div>
-            <p class="mt-3 truncate">{{ post.description }}</p>
+            <div class="mt-3 truncate-3-lines md:truncate-2-lines">{{ post.description }}</div>
           </div>
         </article>
       </div>

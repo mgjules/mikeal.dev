@@ -8,6 +8,12 @@
 module.exports = {
   purge: false,
   theme: {
+    truncate: {
+      lines: {
+        2: '2',
+        3: '3'
+      }
+    },
     fontFamily: {
       google: ['Nunito']
     }
@@ -16,5 +22,5 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'even', 'focus'],
     backgroundOpacity: ['responsive', 'hover', 'even', 'focus']
   },
-  plugins: []
+  plugins: [require('tailwindcss-truncate-multiline')(['responsive'])]
 }
