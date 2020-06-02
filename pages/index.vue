@@ -61,26 +61,34 @@
       title="Recent posts"
       :more="{ label: 'View All Posts', path: '/posts' }"
     >
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <article v-for="post in posts" :key="post.title" class="">
-          <img
-            class="object-center object-cover"
-            :src="require(`~/assets/img/posts/${post.img}`)"
-            :alt="post.title"
-          />
-          <h2 class="mt-2">
-            <a :href="post.link" target="_blank">{{ post.title }}</a>
-          </h2>
-          <div class="-mr-2 -mt-1 flex flex-wrap">
-            <BaseChip
-              v-for="tag in post.tags"
-              :key="tag"
-              class="mr-2 mt-2 text-sm"
-              :title="tag"
-              >{{ tag }}</BaseChip
-            >
+      <div class="flex flex-col space-y-10">
+        <article
+          v-for="post in posts"
+          :key="post.title"
+          class="flex flex-col justify-center md:justify-start md:flex-row space-y-3 md:space-y-0 md:space-x-10"
+        >
+          <div class="relative pb-56 sm:pb-64 md:pr-48 md:pb-32 lg:pr-56 lg:pb-40">
+            <img
+              class="absolute h-full w-full object-top object-cover rounded"
+              :src="require(`~/assets/img/posts/${post.img}`)"
+              :alt="post.title"
+            />
           </div>
-          <p class="mt-3 truncate">{{ post.description }}</p>
+          <div>
+            <h2 class="mt-2">
+              <a :href="post.link" target="_blank">{{ post.title }}</a>
+            </h2>
+            <div class="-mr-2 -mt-1 flex flex-wrap">
+              <BaseChip
+                v-for="tag in post.tags"
+                :key="tag"
+                class="mr-2 mt-2 text-sm"
+                :title="tag"
+                >{{ tag }}</BaseChip
+              >
+            </div>
+            <p class="mt-3 truncate">{{ post.description }}</p>
+          </div>
         </article>
       </div>
     </BaseSection>
