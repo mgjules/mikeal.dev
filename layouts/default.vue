@@ -172,7 +172,7 @@ h4 {
 }
 
 a {
-  @apply no-underline border-b border-transparent text-blue-300;
+  @apply no-underline outline-none border-b border-transparent text-blue-300;
 
   &:hover {
     @apply text-gray-300 border-gray-300 cursor-pointer;
