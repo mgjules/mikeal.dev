@@ -58,7 +58,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: '~/components/Loading.vue',
   /*
    ** Global CSS
    */
@@ -101,5 +101,13 @@ export default {
     fallback: '404.html', // for Netlify
     routes: ['/'] // give the first url to start crawling
   },
-  components: true
+  components: true,
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  },
+  layoutTransition: {
+    name: 'page',
+    mode: 'out-in'
+  }
 }
