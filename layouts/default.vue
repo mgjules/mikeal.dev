@@ -123,6 +123,8 @@ export default {
   created() {
     this.routes = [
       { name: 'Home', path: '/' },
+      { name: 'Projects', path: '/projects' },
+      { name: 'Posts', path: '/posts' },
       { name: 'About', path: '/about' }
     ]
   },
