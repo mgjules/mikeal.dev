@@ -10,9 +10,11 @@
         <slot />
       </div>
       <div v-if="more" class="mt-12 flex justify-center">
-        <BaseButton class="text-sm uppercase" @click.native="navigate(more.path)">{{
-          more.label
-        }}</BaseButton>
+        <BaseButton
+          class="text-sm uppercase"
+          @click.native="$router.push(more.path)"
+          >{{ more.label }}</BaseButton
+        >
       </div>
     </div>
   </section>
@@ -41,13 +43,6 @@ export default {
       validator: function(obj) {
         return obj.hasOwnProperty('label') && obj.hasOwnProperty('path')
       }
-    }
-  },
-  methods: {
-    navigate(path) {
-      this.$router.push({
-        path: path
-      })
     }
   }
 }
