@@ -6,11 +6,11 @@
       >
         <img
           src="~/assets/img/avatar.png"
-          class="object-contain object-center rounded-full"
+          class="flex-shrink-0 h-32 md:h-48 object-cover rounded-full"
         />
         <div class="flex flex-col items-center md:items-start">
-          <h1>{{ jumbo.title }}</h1>
-          <BaseChip class="mt-1" :title="jumbo.job_simplified">{{
+          <h1 class="text-center md:text-left">{{ jumbo.title }}</h1>
+          <BaseChip class="mt-1 text-sm" :title="jumbo.job_simplified">{{
             jumbo.job
           }}</BaseChip>
           <nuxt-content
@@ -30,13 +30,17 @@
       title="Projects"
       :more="{ label: 'View All Projects', path: '/projects' }"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
+      >
         <div v-for="project in projects" :key="project.title">
-          <img
-            class="object-center object-cover"
-            :src="require(`~/assets/img/projects/${project.title}.png`)"
-            :alt="project.title"
-          />
+          <div class="relative pb-64">
+            <img
+              class="absolute h-full w-full object-top object-cover rounded"
+              :src="require(`~/assets/img/projects/${project.title}.png`)"
+              :alt="project.title"
+            />
+          </div>
           <h2 class="mt-2">
             <a :href="project.link" target="_blank">{{ project.title }}</a>
           </h2>
