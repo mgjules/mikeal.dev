@@ -1,11 +1,18 @@
 <template>
   <div class="font-google flex flex-col min-h-screen text-gray-300 text-lg">
     <!-- Header -->
-    <header class="py-5">
+    <header
+      class="w-full fixed z-10 transition-colors ease-in-out duration-500"
+      :class="
+        !atTop || drawer
+          ? 'bg-gray-900 bg-darken-4 shadow-md backdrop-blur bg-opacity-93'
+          : ''
+      "
+    >
       <!-- Navigation -->
       <nav
         role="navigation"
-        class="container mx-auto flex flex-col px-5 md:px-0 md:flex-no-wrap"
+        class="container mx-auto px-5 py-5 md:px-0 flex flex-col md:flex-no-wrap"
       >
         <div class="flex justify-between items-center">
           <div class="truncate">
@@ -71,7 +78,8 @@
     <!-- Footer -->
     <footer>
       <div
-        class="py-1 leading-none text-center text-sm font-hairline text-gray-400 tracking-wide"
+        class="pt-6 leading-none text-center text-sm font-hairline text-gray-400 tracking-wide"
+        :class="isDev ? 'pb-10' : 'pb-3'"
       >
         Made with <span class="text-xl align-middle">♥</span> using
         <a class="font-medium" href="https://nuxtjs.org/" target="_blank"
@@ -85,7 +93,7 @@
     </footer>
     <!-- Debug bar -->
     <div
-      class="fixed w-full bottom-0 flex justify-start flex-wrap px-5 py-1 mt-1 border-t border-gray-800 text-gray-500 tracking-wider space-x-2 text-sm bg-gray-900 bg-opacity-50"
+      class="fixed w-full bottom-0 flex justify-start flex-wrap px-5 py-1 tracking-wider space-x-2 text-sm bg-gray-900 bg-opacity-70"
       v-if="isDev"
     >
       <div class="font-bold uppercase bg-gray-800 px-2 rounded">
@@ -117,12 +125,17 @@
 export default {
   data() {
     return {
+      atTop: true,
       drawer: false,
       vcoConfig: {
         handler: this.closeDrawer,
         events: ['dblclick', 'click']
       }
     }
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+    this.handleScroll()
   },
   created() {
     this.routes = [
@@ -138,6 +151,10 @@ export default {
     }
   },
   methods: {
+    handleScroll() {
+      let pageOffset = window.pageYOffset <= 0
+      this.atTop = pageOffset != this.atTop ? pageOffset : this.atTop
+    },
     closeDrawer(event) {
       if (this.drawer && (this.$screen.xs || this.$screen.sm)) {
         this.drawer = false
@@ -146,6 +163,7 @@ export default {
   },
   watch: {
     '$screen.width'() {
+      this.handleScroll()
       this.closeDrawer()
     },
     '$route.path'() {

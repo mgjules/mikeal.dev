@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.2.0",
+    "@vuejs-community/vue-filter-date-parse": "^1.1.4",
     "nuxt": "^2.0.0",
     "nuxt-imagemin": "^1.0.0",
     "nuxt-webfontloader": "^1.1.0",
+    "tailwindcss-filters": "^3.0.0",
     "tailwindcss-truncate-multiline": "^1.0.3",
     "v-click-outside": "^3.0.1",
     "vue-screen": "^1.4.3"
