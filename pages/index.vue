@@ -10,7 +10,7 @@
         />
         <div class="flex flex-col items-center md:items-start">
           <h1 class="text-center md:text-left">{{ jumbo.title }}</h1>
-          <BaseChip class="mt-1 text-sm" :title="jumbo.job_simplified">{{
+          <BaseChip class="mt-1 text-sm tracking-wider" :title="jumbo.job_simplified">{{
             jumbo.job
           }}</BaseChip>
           <nuxt-content
@@ -31,24 +31,24 @@
       :more="{ label: 'View All Projects', path: '/projects' }"
     >
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
       >
         <div v-for="project in projects" :key="project.title">
-          <div class="relative pb-64">
+          <div class="relative pb-2/3">
             <img
-              class="absolute h-full w-full object-top object-cover rounded"
+              class="absolute h-full w-full object-top object-cover rounded-lg"
               :src="require(`~/assets/img/projects/${project.title}.png`)"
               :alt="project.title"
             />
           </div>
-          <h2 class="mt-2">
+          <h2 class="mt-2 font-semibold">
             <a :href="project.link" target="_blank">{{ project.title }}</a>
           </h2>
           <div class="-mr-2 -mt-1 flex flex-wrap">
             <BaseChip
               v-for="tech in project.techs"
               :key="tech"
-              class="mr-2 mt-2 text-sm"
+              class="mr-2 mt-2 uppercase text-xs tracking-wider"
               :title="tech"
               >{{ tech }}</BaseChip
             >
@@ -67,27 +67,28 @@
           :key="post.id"
           class="flex flex-col justify-center md:justify-start md:flex-row space-y-3 md:space-y-0 md:space-x-10"
         >
-          <div class="md:w-1/4 relative pb-56 md:pb-40">
+          <div class="md:w-1/3 xl:w-1/4 relative pb-2/3 md:pb-1/5 xl:pb-1/6">
             <img
-              class="absolute h-full w-full object-cover rounded"
+              class="absolute h-full w-full object-cover rounded-lg"
               :src="require(`~/assets/img/posts/${post.img}`)"
               :alt="post.title"
             />
           </div>
-          <div class="md:w-3/4">
-            <h2 class="mt-2">
-              <a :href="post.link" target="_blank">{{ post.title }}</a>
+          <div class="md:w-2/3 xl:w-3/4 flex flex-col justify-start md:justify-center">
+            <h2 class="font-semibold">
+              <nuxt-link :to="`/posts/${post.slug}`">{{ post.title }}</nuxt-link>
             </h2>
-            <div class="-mr-2 -mt-1 flex flex-wrap">
+            <p class="text-sm text-gray-500 uppercase">{{ post.createdAt }}</p>
+            <p class="mt-3 truncate-3-lines md:truncate-2-lines lg:truncate-3-lines">{{ post.description }}</p>
+            <div class="-mr-2 -mt-1 md:-md-2 flex flex-wrap">
               <BaseChip
                 v-for="tag in post.tags"
                 :key="tag"
-                class="mr-2 mt-2 text-sm"
+                class="mr-2 mt-3 text-xs tracking-wider uppercase"
                 :title="tag"
                 >{{ tag }}</BaseChip
               >
             </div>
-            <div class="mt-3 truncate-3-lines md:truncate-2-lines">{{ post.description }}</div>
           </div>
         </article>
       </div>

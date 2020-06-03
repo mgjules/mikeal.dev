@@ -2,11 +2,11 @@
   <section :class="secondary ? 'bg-blue-900 bg-darken-4 bg-opacity-25' : ''">
     <div
       class="container mx-auto px-5 md:px-0"
-      :class="jumbo ? 'pt-8 pb-16' : 'py-10'"
+      :class="jumbo ? 'pt-24 pb-16' : 'py-10'"
     >
-      <h1 v-if="title">{{ title }}</h1>
-      <span v-if="description" class="text-gray-600">{{ description }}</span>
-      <div :class="title || description ? 'mt-10' : ''">
+      <h1 class="text-center md:text-left" v-if="title">{{ title }}</h1>
+      <p v-if="description" class="text-gray-600 text-center md:text-left">{{ description }}</p>
+      <div :class="title || description ? 'mt-6' : ''">
         <slot />
       </div>
       <div v-if="more" class="mt-12 flex justify-center">
