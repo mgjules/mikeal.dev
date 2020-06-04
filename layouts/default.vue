@@ -16,7 +16,7 @@
       >
         <div class="flex justify-between items-center">
           <div class="truncate">
-            <nuxt-link to="/" class="text-xl uppercase border-0"
+            <nuxt-link to="/" class="text-xl uppercase border-0 select-none"
               >School/Of/<span class="font-bold">Thoughts</span></nuxt-link
             >
           </div>
@@ -205,11 +205,15 @@ a {
 }
 
 .top-link {
-  a.nuxt-link-exact-active {
-    @apply bg-blue-400 text-gray-900;
+  a {
+    @apply select-none;
+    
+    &.nuxt-link-exact-active {
+      @apply bg-blue-400 text-gray-900;
 
-    &:hover {
-      @apply border-transparent cursor-default;
+      &:hover {
+        @apply border-transparent cursor-default;
+      }
     }
   }
 }
