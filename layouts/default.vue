@@ -65,6 +65,7 @@
               :key="route.name"
               class="border border-transparent px-3 py-2 rounded hover:border-blue-400"
               :to="route.path"
+              @click="closeDrawer"
               >{{ route.name }}</nuxt-link
             >
           </div>
@@ -93,7 +94,7 @@
     </footer>
     <!-- Debug bar -->
     <div
-      class="fixed w-full bottom-0 flex justify-start flex-wrap px-5 py-1 tracking-wider space-x-2 text-sm bg-gray-900 bg-opacity-70"
+      class="fixed w-full bottom-0 flex justify-start flex-wrap px-5 py-1 tracking-wider space-x-2 text-sm bg-gray-900 backdrop-blur bg-opacity-70"
       v-if="isDev"
     >
       <div class="font-bold uppercase bg-gray-800 px-2 rounded">
