@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="loading"
-    class="z-10 fixed w-full h-full flex flex-col text-blue-400 items-center justify-center top-0 left-0 bg-gray-900 bg-darken-4 bg-opacity-75"
+    class="z-10 fixed w-full h-full flex flex-col text-blue-400 items-center justify-center top-0 left-0 bg-gray-900 bg-darken-4 backdrop-blur bg-opacity-75"
   >
     <svg
       version="1.1"

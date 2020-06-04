@@ -1,5 +1,5 @@
 <template>
-  <section :class="secondary ? 'bg-blue-900 bg-darken-4 bg-opacity-25' : ''">
+  <section :class="secondary ? 'bg-blue-900 bg-opacity-25' : ''">
     <div
       class="container mx-auto px-5 md:px-0"
       :class="jumbo ? 'pt-24 pb-16' : 'py-10'"
