@@ -73,7 +73,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxt/components'
+    '@nuxt/components',
+    '@nuxtjs/date-fns'
   ],
   /*
    ** Nuxt.js modules

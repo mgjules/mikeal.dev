@@ -78,7 +78,7 @@
             <h2 class="font-semibold">
               <nuxt-link :to="`/posts/${post.slug}`">{{ post.title }}</nuxt-link>
             </h2>
-            <p class="text-sm text-gray-500 uppercase">{{ post.createdAt }}</p>
+            <p class="text-sm text-gray-500 uppercase">{{ $dateFns.format(post.createdAt, 'dd MMM yyyy' ) }}</p>
             <p class="mt-3 truncate-3-lines md:truncate-2-lines lg:truncate-3-lines">{{ post.description }}</p>
             <div class="-mr-2 -mt-1 md:-md-2 flex flex-wrap">
               <BaseChip
