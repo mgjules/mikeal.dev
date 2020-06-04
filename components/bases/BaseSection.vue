@@ -4,7 +4,7 @@
       class="container mx-auto px-5 md:px-0"
       :class="jumbo ? 'pt-24 pb-16' : 'py-10'"
     >
-      <h1 class="text-center md:text-left" v-if="title">{{ title }}</h1>
+      <h1 :id="title.toLowerCase().trim()" class="text-center md:text-left" v-if="title">{{ title }}</h1>
       <p v-if="description" class="text-gray-600 text-center md:text-left">{{ description }}</p>
       <div :class="title || description ? 'mt-6' : ''">
         <slot />
