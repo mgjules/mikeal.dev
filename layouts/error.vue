@@ -2,12 +2,15 @@
   <div
     class="container mx-auto flex flex-col justify-center items-center flex-grow"
   >
-    <img
-      src="~/assets/img/error.jpg"
-      alt="wtf?"
-      class="h-40 w-40 object-cover rounded-full"
-    />
-    <h1 class="uppercase font-light text-4xl mt-2">UH OH!</h1>
+    <div v-lazy-container="{ selector: 'img' }">
+      <img
+        class="h-40 w-40 object-cover rounded-full"
+        :data-src="require(`~/assets/img/error.jpg`)"
+        :data-loading="require(`~/assets/img/error.jpg?lqip`)"
+        alt="wtf?"
+      />
+    </div>
+    <h1 class="uppercase font-bold text-4xl mt-2">UH OH!</h1>
     <h2 class="uppercase font-light text-2xl mt-1">
       {{ errorMsg }}
     </h2>
