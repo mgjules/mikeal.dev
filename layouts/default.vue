@@ -204,10 +204,14 @@ a {
   }
 }
 
+img[lazy='loading'] {
+  filter: blur(15px);
+}
+
 .top-link {
   a {
     @apply select-none;
-    
+
     &.nuxt-link-exact-active {
       @apply bg-blue-400 text-gray-900;
 
