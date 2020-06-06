@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <article class="mt-8">
-      <div class="container px-5 md:px-0">
+      <div class="container">
         <h1 class="font-semibold" :title="post.title">
           {{ post.title }}
         </h1>
