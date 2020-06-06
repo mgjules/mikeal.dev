@@ -100,6 +100,9 @@
       <div class="font-bold uppercase bg-gray-800 px-2 rounded">
         {{ $screen.breakpoint }}
       </div>
+      <div class="font-bold uppercase bg-gray-800 px-2 rounded">
+        {{ $screen.width }} x {{ $screen.height }}
+      </div>
       <div
         class="font-bold uppercase bg-gray-800 px-2 rounded"
         v-if="$screen.landscape"
