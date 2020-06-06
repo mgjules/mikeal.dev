@@ -66,7 +66,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '@/plugins/vClickOutside', ssr: false }],
+  plugins: [
+    { src: '@/plugins/vClickOutside', mode: 'client' },
+    { src: '@/plugins/VueLazyload', mode: 'client' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -74,7 +77,9 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/components',
-    '@nuxtjs/date-fns'
+    '@nuxtjs/date-fns',
+    '@nuxtjs/google-analytics',
+    '@aceforth/nuxt-optimized-images'
   ],
   /*
    ** Nuxt.js modules
@@ -82,8 +87,7 @@ export default {
   modules: [
     '@nuxt/content',
     'vue-screen/nuxt',
-    'nuxt-imagemin',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
   /*
    ** Build configuration
@@ -102,5 +106,9 @@ export default {
     fallback: '404.html', // for Netlify
     routes: ['/'] // give the first url to start crawling
   },
-  components: true
+  components: true,
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true
+  }
 }
