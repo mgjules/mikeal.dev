@@ -2,13 +2,13 @@
   <div class="w-full">
     <BaseSection jumbo>
       <div
-        class="flex flex-col items-center md:flex-row space-x-0 md:space-x-10 space-y-4 md:space-y-0"
+        class="flex flex-col items-center md:flex-row space-x-0 md:space-x-12 space-y-4 md:space-y-0"
       >
-        <div v-lazy-container="{ selector: 'img' }">
+        <div class="flex-shrink-0" v-lazy-container="{ selector: 'img' }">
           <img
-            :data-src="require('~/assets/img/avatar.png')"
-            :data-loading="require('~/assets/img/avatar.png?lqip')"
-            class="flex-shrink-0 h-32 md:h-48 object-cover rounded-full"
+            :data-src="require(`~/assets/img/${jumbo.picture}`)"
+            :data-loading="require(`~/assets/img/${jumbo.picture}?lqip`)"
+            class="h-32 md:h-48 object-cover rounded-full"
           />
         </div>
         <div class="flex flex-col items-center md:items-start">
