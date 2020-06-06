@@ -99,7 +99,7 @@
               <BaseChip
                 v-for="tag in post.tags"
                 :key="tag"
-                class="mr-2 mt-3 text-xs tracking-wider uppercase"
+                class="mr-2 mt-3 text-xs tracking-wider uppercase truncate"
                 :title="tag"
                 >{{ tag }}</BaseChip
               >

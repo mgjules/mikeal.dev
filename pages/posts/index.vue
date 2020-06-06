@@ -11,14 +11,14 @@
               :alt="post.title"
             />
           </div>
-          <h2 class="font-semibold mt-2">
+          <h2 class="font-semibold mt-2 truncate" :title="post.title">
             <nuxt-link :to="`/posts/${post.slug}`">{{ post.title }}</nuxt-link>
           </h2>
           <p class="text-sm text-gray-500 uppercase">
             {{ $dateFns.format(post.createdAt, 'dd MMM yyyy') }}
           </p>
           <p
-            class="mt-3 truncate-3-lines md:truncate-2-lines lg:truncate-3-lines"
+            class="mt-3 truncate-3-lines"
           >
             {{ post.description }}
           </p>
@@ -26,7 +26,7 @@
             <BaseChip
               v-for="tag in post.tags"
               :key="tag"
-              class="mr-2 mt-3 text-xs tracking-wider uppercase"
+              class="mr-2 mt-3 text-xs tracking-wider uppercase truncate"
               :title="tag"
               >{{ tag }}</BaseChip
             >
