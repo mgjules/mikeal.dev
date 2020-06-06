@@ -73,7 +73,7 @@
       </nav>
     </header>
     <!-- Main content -->
-    <main class="flex-grow flex">
+    <main class="flex-grow flex mt-20">
       <nuxt />
     </main>
     <!-- Footer -->
