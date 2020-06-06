@@ -8,6 +8,15 @@
 module.exports = {
   purge: false,
   theme: {
+    container: {
+      center: true,
+      padding: {
+        default: '1.25rem',
+        sm: '1.25rem',
+        lg: '0rem',
+        xl: '0rem'
+      }
+    },
     opacity: {
       '0': '0',
       '10': '.1',

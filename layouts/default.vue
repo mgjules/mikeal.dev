@@ -12,7 +12,7 @@
       <!-- Navigation -->
       <nav
         role="navigation"
-        class="container mx-auto px-5 py-5 md:px-0 flex flex-col md:flex-no-wrap"
+        class="container py-5 flex flex-col md:flex-no-wrap"
       >
         <div class="flex justify-between items-center">
           <div class="truncate">
