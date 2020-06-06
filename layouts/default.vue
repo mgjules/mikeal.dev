@@ -14,11 +14,14 @@
         role="navigation"
         class="container py-5 flex flex-col md:flex-no-wrap"
       >
-        <div class="flex justify-between items-center">
-          <div class="truncate">
-            <nuxt-link to="/" class="text-xl uppercase border-0 select-none"
-              >School/Of/<span class="font-bold">Thoughts</span></nuxt-link
-            >
+        <div class="flex justify-between items-center space-x-3">
+          <div class="flex items-center space-x-3 truncate">
+            <div class="truncate">
+              <nuxt-link to="/" class="text-xl uppercase border-0 select-none"
+                >School/Of/<span class="font-bold">Thoughts</span></nuxt-link
+              >
+            </div>
+            <span title="WORK IN PROGRESS!" class="py-1 px-2 tracking-wider text-xs uppercase text-yellow-400 border border-yellow-400 rounded-lg">WIP</span>
           </div>
           <div>
             <button
