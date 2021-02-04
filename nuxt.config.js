@@ -2,6 +2,7 @@ const URL = 'https://mikeal.dev'
 
 export default {
   mode: 'universal',
+  target: 'static',
   head: {
     titleTemplate: chunk => {
       if (chunk) {
@@ -84,11 +85,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxt/content',
-    'vue-screen/nuxt',
-    'nuxt-webfontloader',
-  ],
+  modules: ['@nuxt/content', 'vue-screen/nuxt', 'nuxt-webfontloader'],
   /*
    ** Build configuration
    */
