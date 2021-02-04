@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002Fmikeal.dev\u002F_nuxt\u002Fstatic\u002F1612431050",layout:"default",error:null,state:{dev:false},serverRendered:true,routePath:"\u002Fposts\u002Fphp-is-the-new-cool-thing",config:{content:{dbHash:"1ba4ee37"}}};
