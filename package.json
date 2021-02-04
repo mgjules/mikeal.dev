@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxt/content": "^1.2.0",
@@ -35,6 +36,7 @@
     "lqip-loader": "^2.2.0",
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
+    "push-dir": "^0.4.1",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^8.0.2",
     "sharp": "^0.25.3",
