@@ -43,6 +43,9 @@ export default {
     // link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  router: {
+    base: '/mikeal.dev/'
+  },
   webfontloader: {
     google: {
       families: ['Nunito:100,200,300,400,500,600,700'] //Loads Lato font with weights 400 and 700
