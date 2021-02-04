@@ -102,7 +102,6 @@ export default {
    ** Give routes to static generation
    */
   generate: {
-    fallback: '404.html', // for Netlify
     routes: ['/'] // give the first url to start crawling
   },
   components: true,
