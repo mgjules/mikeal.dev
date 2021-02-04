@@ -1,7 +1,6 @@
 const URL = 'https://mikeal.dev'
 
 export default {
-  mode: 'universal',
   target: 'static',
   head: {
     titleTemplate: chunk => {
